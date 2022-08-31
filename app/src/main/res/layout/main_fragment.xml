@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FragmentMain">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <TextView
+            android:id="@+id/expressionTv"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:text=""
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/resultadoTv"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:text=""
+            android:textSize="30sp"
+            app:layout_constraintBottom_toTopOf="@id/calcLay" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <Button
+                android:id="@+id/percentagemBt"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                android:text="%"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+            <Button
+                android:id="@+id/potencialBt"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                android:text="^"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+            <Button
+                android:id="@+id/squareRootBt"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:background="@color/teal_200"
+                android:visibility="gone"
+                android:text=" √"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+            <Button
+                android:id="@+id/backspaceBt"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:background="@color/teal_200"
+                android:text=" backspace"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/clearBt"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@color/calc_ic_background"
+                android:text="C"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                app:backgroundTint="#735578"
+                app:layout_constraintTop_toBottomOf="@+id/fecharAppBt"
+                app:layout_constraintTop_toTopOf="@id/resultadoTv" />
+
+            <Button
+                android:id="@+id/plusBt"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@color/teal_200"
+                android:text="+"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                app:backgroundTint="#735578" />
+
+            <Button
+                android:id="@+id/multiplyBt"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:text="X"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                app:backgroundTint="#735578" />
+
+            <Button
+                android:id="@+id/divideBt"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:text="÷"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                app:backgroundTint="#735578" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/calcLay"
+            android:layout_width="match_parent"
+            android:layout_height="252dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/sevenBt"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:text="7"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    app:layout_constraintTop_toBottomOf="@+id/fecharAppBt"
+                    app:layout_constraintTop_toTopOf="@id/resultadoTv" />
+
+                <Button
+                    android:id="@+id/eightBt"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:text="8"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+                <Button
+                    android:id="@+id/nineBt"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:text="9"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+
+                <Button
+                    android:id="@+id/subtractionBt"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:paddingVertical="11dp"
+                    android:layout_gravity="center"
+                    android:text="—"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    app:backgroundTint="#735578" />
+            </LinearLayout>
+
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/sixBt"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:text="6"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    app:layout_constraintTop_toBottomOf="@+id/fecharAppBt"
+                    app:layout_constraintTop_toTopOf="@id/resultadoTv" />
+
+                <Button
+                    android:id="@+id/fiveBt"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:text="5"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+                <Button
+                    android:id="@+id/fourBt"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:text="4"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+
+                <Button
+                    android:id="@+id/dotBt"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:text=" ."
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    app:backgroundTint="#735578" />
+
+            </LinearLayout>
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/threeBt"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:text="3"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    app:layout_constraintTop_toBottomOf="@+id/fecharAppBt"
+                    app:layout_constraintTop_toTopOf="@id/resultadoTv" />
+
+
+                <Button
+                    android:id="@+id/twoBt"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:text="2"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+                <Button
+                    android:id="@+id/oneBt"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:text="1"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+                <Button
+                    android:id="@+id/zeroBt"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:text="0"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+
+                <Button
+                    android:id="@+id/equalBt"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:text="="
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    app:backgroundTint="#2776B5" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</FrameLayout>
